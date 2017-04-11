@@ -1,13 +1,13 @@
 var month_In = document.getElementById('monthIn');
 var year_In = document.getElementById('yearIn');
-var submit_btn = document.getElementById('fetchCalender');
+var submit_btn = document.getElementById('fetchCalendar');
 var reset_btn = document.getElementById('reset');
-var list = document.querySelector('ul.calender');
+var list = document.querySelector('ul.calendar');
 var listItem;
 var infoPara1 = document.getElementById('infopara1');
 var	disp_mm = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 var	disp_dd = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-var disp = document.querySelector('div.calender')
+var disp = document.querySelector('div.calendar')
 var months = [31,0,31,30,31,30,31,31,30,31,30,31];
 var strtDay = [6,0,1,2,3,4,5]
 var dayCount = 0;
@@ -17,7 +17,7 @@ var count = 0;
 var count1 = 0;
 
 submit_btn.addEventListener('click', pgm1);
-reset_btn.addEventListener('click', reset_calender);
+reset_btn.addEventListener('click', reset_calendar);
 
 function pgm1(){
 	
@@ -32,8 +32,8 @@ function pgm1(){
 				listItem.className = "smtwtfs";
 				list.appendChild(listItem);
 			}
-			document.querySelector('.calender h2').style.visibility = "visible";
-			document.querySelector('.calender h2').textContent = disp_mm[month_In.value] + " " + year_In.value;
+			document.querySelector('.calendar h2').style.visibility = "visible";
+			document.querySelector('.calendar h2').textContent = disp_mm[month_In.value] + " " + year_In.value;
 
 			if (leapCheck(yyyy)){
 				months[1] = 29;
@@ -61,23 +61,23 @@ function pgm1(){
 			for(var i=0; i<strtDay[dayCount%7]; i++){
 				listItem = document.createElement('li');
 				listItem.textContent = ".";
-				listItem.className = "calenderDays";
+				listItem.className = "calendarDays";
 				list.appendChild(listItem);
 				count++
 			}
 			
-	//	Insert calender days
+	//	Insert calendar days
 			for(var i=1; i<=months[month_In.value]; i++){
 				listItem = document.createElement('li');
 				listItem.textContent = i;
-				listItem.className = "calenderDays";
+				listItem.className = "calendarDays";
 				list.appendChild(listItem);
 				count++;
 			}
 			document.getElementById('infopara2').textContent = "Days since 1/1/0001: " + (dayCount);	
 		}
 		else{
-			alert('Please reset previous calender');
+			alert('Please reset previous calendar');
 		}
 	}
 	else{
@@ -105,7 +105,7 @@ function LeapsSinceInception(YY){
 	
 	
 	for (var i=1; i<=YY; i++){
-		if(i > 1582){								//Gregorian calender was adopted in 1582. Before 1582 EVERY 4th year, without exception, was a leap year
+		if(i > 1582){								//Gregorian calendar was adopted in 1582. Before 1582 EVERY 4th year, without exception, was a leap year
 			if (i%4 === 0){
 				count1++;
 			}
@@ -125,12 +125,12 @@ function LeapsSinceInception(YY){
 	return(count1 - count2 + count3 + count);	
 }
 
-function reset_calender(){
+function reset_calendar(){
 	count1 = 0;
 	yyyy = 0;
 	months[1] = 0;
 	for(var i=1; i<=count; i++){
-		listItem = document.querySelector('li.calenderDays');
+		listItem = document.querySelector('li.calendarDays');
 		list.removeChild(listItem);
 	}
 	for(var i=0; i<7; i++){
@@ -138,6 +138,6 @@ function reset_calender(){
 		list.removeChild(listItem);
 	}
 	count = 0;
-	document.querySelector('.calender h2').style.visibility = "hidden";
+	document.querySelector('.calendar h2').style.visibility = "hidden";
 	disp.style.visibility = "hidden";
 }
