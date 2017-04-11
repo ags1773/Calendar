@@ -1,3 +1,4 @@
+
 html{
 	width:75%;
 	margin:0 auto;
@@ -15,13 +16,13 @@ div.inData{
 	padding:0.5em;
 	background-color:#dda48c;	/* Dull Red */
 }
-div.calender h2{
+div.calendar h2{
 	visibility:hidden;
 	text-align:center;
 	padding:0.5em;
 	background-color:#0a8698;	/* Blue + Steel */
 }
-div.calender ul{
+div.calendar ul{
 	margin:0 auto;
 	list-style-type:none;
 	padding:0;
@@ -29,7 +30,7 @@ div.calender ul{
 	display:flex;
 	flex-flow: row wrap;
 }
-div.calender li{
+div.calendar li{
 	background-color:#b5dae0;	/*	blue-green	*/
 	width:100px;
 	line-height:40px;
@@ -37,6 +38,6 @@ div.calender li{
 	text-align:center;
 	margin:3px;
 }
-div.calender li.smtwtfs{
+div.calendar li.smtwtfs{
 	background-color:#7e989c ;			/*	Steel	*/
 }
