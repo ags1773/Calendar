@@ -1,5 +1,5 @@
 # Calender
-Display the calender for the chosen month and year.
+Display the calender for the chosen month and year using Javascript.
 
 Important issues:
 - display appropriate calender for October 1582 
