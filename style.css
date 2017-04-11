@@ -1,0 +1,42 @@
+html{
+	width:75%;
+	margin:0 auto;
+	background-color:#707070;	/*Dark Grey*/
+}
+body{
+	padding:1em;
+	background-color:#e6f2f4;	/* light blue-green */
+}
+input#yearIn {
+	width:4em;
+	text-align:center;
+}
+div.inData{
+	padding:0.5em;
+	background-color:#dda48c;	/* Dull Red */
+}
+div.calender h2{
+	visibility:hidden;
+	text-align:center;
+	padding:0.5em;
+	background-color:#0a8698;	/* Blue + Steel */
+}
+div.calender ul{
+	margin:0 auto;
+	list-style-type:none;
+	padding:0;
+	width:745px;
+	display:flex;
+	flex-flow: row wrap;
+}
+div.calender li{
+	background-color:#b5dae0;	/*	blue-green	*/
+	width:100px;
+	line-height:40px;
+	vertical-align:middle;
+	text-align:center;
+	margin:3px;
+}
+div.calender li.smtwtfs{
+	background-color:#7e989c ;			/*	Steel	*/
+}
