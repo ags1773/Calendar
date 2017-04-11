@@ -1,3 +1,3 @@
-# Calender
-Display the calender for the chosen month and year using Javascript.
+# Calendar
+Display the calendar for the chosen month and year using Javascript.
 
